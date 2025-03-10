@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 //@RequestMapping("/auth")
 public class AuthUserController {
@@ -34,6 +33,7 @@ public class AuthUserController {
         ResponseDTO responseDTO = new ResponseDTO(responseMessage, null);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
+
     @PutMapping("/resetPassword/{email}")
     public ResponseEntity<ResponseDTO> resetPassword(@PathVariable String email,
                                                      @Valid @RequestBody ResetPasswordDTO resetPasswordDTO) {
