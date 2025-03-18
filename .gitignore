@@ -1,24 +1,33 @@
-# Logs
-*.log
-logs/
-logs/*.log
-*.log.*
-*.out
-*.err
-*.bak
-*.tmp
-
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# Dependency directories
-/node_modules/
+HELP.md
 target/
-build/
-bin/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# IDE files (already included but additional safety)
-.idea/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
 .vscode/
