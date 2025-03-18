@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @NoArgsConstructor
 @Entity
@@ -18,6 +19,8 @@ public class AuthUser {
     private String lastName;
     private String email;
     private String password;
+    String hashPass;
+    String token;
     private String resetToken;
 
     public String getResetToken() {
@@ -64,14 +67,39 @@ public class AuthUser {
         return password;
     }
 
+    public void setHashPass(String hashPass) {
+        this.hashPass = hashPass;
+    }
+
+    public String getHashPass() {
+        return hashPass;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     public AuthUser(AuthUserDTO userDTO) {
-        this.firstName=userDTO.getFirstName();
-        this.lastName=userDTO.getLastName();
-        this.email=userDTO.getEmail();
-        this.password=userDTO.getPassword();
+        this.firstName = userDTO.getFirstName();
+        this.lastName = userDTO.getLastName();
+        this.email = userDTO.getEmail();
+        this.password = userDTO.getPassword();
+    }
+
+    public AuthUser(String firstName, String lastName, String email, String password, String hashPass, String token) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.hashPass = hashPass;
+        this.token = token;
     }
 }

@@ -149,7 +149,6 @@ class AddressBookServiceTest {
 
         assertTrue(service.deleteContact(1L));
     }
-
     @Test
     void deleteContact_ShouldThrowExceptionWhenNotFound() {
         when(repository.existsById(1L)).thenReturn(false);
@@ -157,7 +156,6 @@ class AddressBookServiceTest {
         UserException exception = assertThrows(UserException.class, () -> service.deleteContact(1L));
         assertEquals("Contact not found with ID: 1", exception.getMessage());
     }
-
     @Test
     void deleteContact_ShouldThrowExceptionOnFailure() {
         when(repository.existsById(1L)).thenReturn(true);
