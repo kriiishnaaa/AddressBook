@@ -81,8 +81,3 @@
 2025-03-08 19:07:06 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
 2025-03-08 19:07:07 [http-nio-8080-exec-1] INFO  c.e.A.Service.AuthenticatiionService - Registering new user: smnj004@gmail.com
 2025-03-08 19:07:15 [http-nio-8080-exec-1] INFO  c.e.A.Service.AuthenticatiionService - User smnj004@gmail.com registered successfully.
-2025-03-08 19:14:45 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-03-08 19:14:45 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-03-08 19:14:45 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-03-08 19:14:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-03-08 19:14:45 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
